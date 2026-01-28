@@ -1,11 +1,15 @@
 # Python Code Practice
 
 ## Table of Contents
+- [Introduction](#introduction)
+- [Code Basic](#code-basic)
+- [Conclusion](#conclusion)
+
 
 ### Introduction 
 This repository is based on how I used various Python techniques and libraries to implement in my Data Analytics Project. The project starts with the basic codes of python and later get advanced by using numpy, pandas and matplotlib. 
 
-### Code 
+### Code Basic 
 ``` Python
 print(6+4*10)
 print((6+4)*10)
