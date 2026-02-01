@@ -246,6 +246,61 @@ arr2d[:2]
 arr2d[:2, 1:]
 arr2d[1,:3]
 arr2d[:3,2]
+import numpy as np
+names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
+names =='Bob'
+names[names != 'Bob']
+data = np.random.randn(7,4)
+data
+data[names=='Bob']
+data[names == 'Bob', 2:]
+data[names == 'Bob', 3]
+names != 'Bob'
+data[~(names == 'Bob')]
+arr = np.empty((8,4))
+
+for i in range(8):
+    arr[i] = i
+    
+arr
+arr[[4,3,0,2]]
+arr[[-3,-5,-7]]
+arr = np.arange(32).reshape((8,4))
+arr
+arr[[1,5,7,2],[0,3,1,2]]
+arr[[1,5,7,2]][:,[0,3,1,2]]
+arr = np.arange(15).reshape((3,5))
+arr
+arr.T
+np.dot(arr.T, arr)
+arr = np.arange(16).reshape((2,2,4))
+arr
+arr = np.arange(10)
+arr
+arr = np.arange(10)
+arr
+np.exp(arr)
+x = np.random.randn(8)
+y = np.random.randn(8)
+print (x)
+print (y)
+np.maximum(x,y)
+remainder, whole_part = np.modf(arr)
+print(remainder)
+print(whole_part)
+remainder, whole_part = np.modf(arr)
+print(remainder)
+print(whole_part)
+xarr = np.array([1.1, 1.2, 1.3, 1.4, 1.5])
+yarr = np.array([2.1, 2.2, 2.3, 2.4, 2.5])
+cond = np.array([True, False, True, True, False])
+result = [(x if c else y)
+         for x, y, c in zip(xarr, yarr, cond)]
+result
+arr = np.array([0,1,2,3,45,6,7])
+arr.cumsum()
+values = np.array([6,0,0,2,3,5,6])
+np.in1d(values, [2,3,6])
 ```
 
 ### Conclusion
