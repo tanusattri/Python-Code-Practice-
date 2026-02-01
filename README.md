@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [Code Basic](#code-basic)
 - [Conclusion](#conclusion)
+- [Numpy](#numpy)
 
 
 ### Introduction 
@@ -183,6 +184,68 @@ sum=0
 for i in l2:
   sum= sum+i
 print(sum)
+```
+
+### Numpy
+``` Python
+import numpy as np
+data= np.random.randn(2,3)
+print(data)
+data= data*10
+print(data)
+data= data+data
+print(data)
+data.shape
+data.dtype
+data.ndim
+data1= [10,20,0,30,40,50]
+arr1= np.array(data1)
+print(arr1)
+data2= [[0,1,2,3,4,5],[10,20,30,40,0,50]]
+arr2= np.array(data2)
+print(arr2)
+data3= np.empty((2,3))
+print(data3)
+data4= np.zeros((2,3))
+print(data4)
+data4.dtype
+data5= np.ones((2,3), dtype= int)
+print(data5)
+data6= np.arange(2,7)
+print(data6)
+data7= np.full((2,3),8)
+print(data7)
+arr1= np.array([1,2,3], dtype= np.float64)
+print(arr1)
+arr= np.array([[1,2,3],[4,5,6]], dtype= np.float64)
+print(arr)
+arr_2= np.array([[1,2,3],[4,5,10]],dtype= np.float64)
+arr_2>arr
+arr2= arr**0.5
+print(arr2)
+arr= np.arange(10)
+print(arr)
+arr_copy= arr[5:8].copy()
+arr_copy[:]= 12
+print(arr_copy)
+arr2d  = np.array([[1,2,3],[4,5,6],[7,8,9]])
+arr2d[2] #row extracts
+arr2d[0][2]
+arr2d[0,2]
+arr2d[0]
+arr_copy = arr2d[0].copy()
+arr2d[0] = 42
+arr2d
+arr2d[0]=arr_copy
+arr2d
+arr= np.array([64,64,64,64,64,64,64,64,64,64])
+print(arr)
+arr[1:6]
+print(arr2d)
+arr2d[:2]
+arr2d[:2, 1:]
+arr2d[1,:3]
+arr2d[:3,2]
 ```
 
 ### Conclusion
