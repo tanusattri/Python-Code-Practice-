@@ -304,4 +304,4 @@ np.in1d(values, [2,3,6])
 ```
 
 ### Conclusion
-Syntax and Logic Practice with help of Python. 
+Syntax and Logic Practice with help of Python using libraries like NumPy.  
