@@ -304,6 +304,34 @@ np.in1d(values, [2,3,6])
 ```
 
 ### Pandas
+```Python
+import pandas as pd
+obj= pd.Series([1,2,3,4,5])
+print(obj)
+obj2 = pd.Series([4,7,-5,3], index=['d','b','a','c'])
+obj2
+obj2.index
+obj2.values
+obj2['a']
+obj2['d'] = 6
+obj2[['c','a','d']]
+obj2[obj2 > 0]
+obj2 * 2
+import numpy as np
+np.exp(obj2)
+sdata = {'Ohio': 3500, 'Texas':71000, 'Oregon':16000, 'Utah':5000}
+obj3 = pd.Series(sdata)
+obj3
+states = ['California','Ohio','Oregon','Texas']
+obj4 = pd.Series(sdata, index=states)
+obj4
+pd.isnull(obj4)
+pd.notnull(obj4)
+obj3 + obj4
+obj4.name = 'population'
+obj4.index.name = 'state'
+obj4
+```
 
 ### Conclusion
-Syntax and Logic Practice with help of Python using libraries like NumPy.  
+Syntax and Logic Practice with help of Python using libraries like NumPy, Pandas.  
