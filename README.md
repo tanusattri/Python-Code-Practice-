@@ -5,7 +5,7 @@
 - [Code Basic](#code-basic)
 - [Conclusion](#conclusion)
 - [Numpy](#numpy)
-
+- [Pandas](#pandas)
 
 ### Introduction 
 This repository is based on how I used various Python techniques and libraries to implement in my Data Analytics Project. The project starts with the basic codes of python and later get advanced by using numpy, pandas and matplotlib. 
@@ -302,6 +302,8 @@ arr.cumsum()
 values = np.array([6,0,0,2,3,5,6])
 np.in1d(values, [2,3,6])
 ```
+
+### Pandas
 
 ### Conclusion
 Syntax and Logic Practice with help of Python using libraries like NumPy.  
