@@ -5,7 +5,8 @@
 - [Code Basic](#code-basic)
 - [Conclusion](#conclusion)
 - [Numpy](#numpy)
-- [Pandas](#pandas)
+- [Pandas Series](#pandas-series)
+- [Pandas DataFrame](#pandas-dataframe)
 
 ### Introduction 
 This repository is based on how I used various Python techniques and libraries to implement in my Data Analytics Project. The project starts with the basic codes of python and later get advanced by using numpy, pandas and matplotlib. 
@@ -303,7 +304,7 @@ values = np.array([6,0,0,2,3,5,6])
 np.in1d(values, [2,3,6])
 ```
 
-### Pandas
+### Pandas Series
 ```Python
 import pandas as pd
 obj= pd.Series([1,2,3,4,5])
@@ -331,6 +332,100 @@ obj3 + obj4
 obj4.name = 'population'
 obj4.index.name = 'state'
 obj4
+```
+
+### Pandas DataFrame 
+```Python
+import pandas as pd
+f= {'name':['x','y','z'],'age':[12,14,16]}
+df= pd.DataFrame(f)
+print(df)
+df.head()
+data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],
+       'year' : [2000, 2001, 2002, 2001, 2002, 2003],
+       'pop' : [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
+frame = pd.DataFrame(data)
+print(frame)
+frame.head()
+pd.DataFrame(data, columns=['year', 'state','pop'])
+frame2 = pd.DataFrame(data, columns = ['year', 'state', 'pop', 'debt'],
+                     index = ['one', 'two', 'three', 'four', 'five', 'six'])
+print(frame2)
+frame2.columns
+frame2.loc['three']
+frame2['debt'] = 16.5
+frame2
+import numpy as np
+frame2['debt'] = np.arange(6.0)
+frame2
+val = pd.Series([-1.2, -1.5, -1.7], index = ['two','four','five'])
+frame2['debt'] = val
+frame2
+val = pd.Series([-1.2, -1.5, -1.7], index = ['two','four','five'])
+frame2['debt'] = val
+frame2
+del frame2['eastern']
+frame2.columns
+pop = {'Nevada': {2001: 2.4, 2002: 2.9},
+      'Ohio': {2000: 1.5, 2001: 1.7, 2002: 3.6}}
+frame3 = pd.DataFrame(pop)
+frame3
+pdata = {'Ohio': frame3['Ohio'][:-1],
+        'Nevada': frame3['Nevada'][:2]}
+pd.DataFrame(pdata)
+frame3.T
+frame3.values
+frame2.values
+obj = pd.Series(range(3), index=['a','b','c'])
+index = obj.index
+index
+index[1] = 'd'
+labels = pd.Index(np.arange(3))
+labels
+obj2 = pd.Series([1.5, -2.5, 0], index = labels)
+obj2
+obj2.index is labels
+frame3.columns
+'Ohio' in frame3.columns
+2003 in frame3.columns
+dup_labels = pd.Index(['foo', 'foo', 'bar', 'bar'])
+dup_labels
+obj = pd.Series(np.arange(5.), index=['a','b','c','d','e'])
+obj
+new_obj = obj.drop('c')
+new_obj
+obj.drop(['d','c'])
+data = pd.DataFrame(np.arange(16).reshape((4,4)),
+                   index = ['Ohio','Colorado','Utah','New York'],
+                   columns = ['one','two','three','four'])
+data
+data.drop(['Colorado', 'Ohio'])
+data.drop('two', axis=1)
+data.drop(['two','four'], axis='columns')
+obj = pd.Series(np.arange(5.), index=['a','b','c','d','e'])
+obj.drop('c', inplace=True)
+obj
+obj = pd.Series(np.arange(4.), index = ['a','b','c','d'])
+obj
+obj['b']
+obj[1]
+obj[2:4]
+obj[['b','a','d']]
+obj[[1,3]]
+obj[obj < 2]
+obj['b':'c']
+obj['b':'c'] = 5
+obj
+data = pd.DataFrame(np.arange(16).reshape((4,4)),
+                   index = ['Ohio','Colorado','Utah','New York'],
+                   columns = ['one','two','three','four'])
+data
+data['two']
+data[['three', 'one']]
+data[data['three'] > 5]
+data < 5
+data[data < 5] = 0
+data
 ```
 
 ### Conclusion
