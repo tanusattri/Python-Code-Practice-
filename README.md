@@ -429,4 +429,4 @@ data
 ```
 
 ### Conclusion
-Syntax and Logic Practice with help of Python using libraries like NumPy, Pandas.  
+Syntax and Logic Practice with help of Python using libraries like NumPy, Pandas and Matplotlib.
