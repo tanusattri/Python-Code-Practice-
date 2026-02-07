@@ -426,6 +426,14 @@ data[data['three'] > 5]
 data < 5
 data[data < 5] = 0
 data
+import pandas as pd
+import numpy as np
+
+data = pd.DataFrame(np.arange(16).reshape((4,4)),
+                   index = ['Ohio','Colorado','Utah','New York'],
+                   columns = ['one','two','three','four'])
+data[data < 5] = 0
+data.loc[:'Utah', 'two']
 ```
 
 ### Conclusion
