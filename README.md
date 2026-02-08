@@ -476,6 +476,42 @@ series3 = frame['d']
 series3
 frame
 frame.sub(series3, axis='index')
+frame = pd.DataFrame(np.random.randn(4,3), columns=list('bde'),
+                    index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+frame
+import numpy as np
+np.abs(frame)
+f = lambda x: x.max() - x.min()
+frame.apply(f)
+frame.apply(f, axis='columns')
+def f(x):
+    return pd.Series([x.min(), x.max()], index=['min','max'])
+frame.apply(f)
+format = lambda x: '%.2f' % x
+frame.applymap(format)
+frame['e'].map(format)
+obj = pd.Series(range(4), index=['d','a','b','c'])
+obj.sort_index()
+frame = pd.DataFrame(np.arange(8).reshape((2,4)),
+                    index=['three','one'],
+                    columns = ['d','a','b','c'])
+frame.sort_index()
+frame.sort_index(axis=1)
+frame.sort_index(axis=1, ascending=False)
+obj = pd.Series([4, np.nan, 7, np.nan, -3, 2])
+obj.sort_values()
+frame = pd.DataFrame({'b': [4,7,-3,2], 'a':[0,1,0,1]})
+frame
+frame.sort_values(by='b')
+frame.sort_values(by=['a','b'])
+obj = pd.Series([7,-5,7,4,2,0,4])
+obj.rank()
+obj.rank(method='first')
+obj.rank(ascending=False, method='max')
+frame = pd.DataFrame({'b': [4.3,7,-3,2], 'a':[0,1,0,1],
+                     'c': [-2,5,8,-2.5]})
+frame
+frame.rank(axis='columns')
 ```
 
 ### Conclusion
