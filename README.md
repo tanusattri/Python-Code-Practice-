@@ -434,6 +434,48 @@ data = pd.DataFrame(np.arange(16).reshape((4,4)),
                    columns = ['one','two','three','four'])
 data[data < 5] = 0
 data.loc[:'Utah', 'two']
+s1 = pd.Series([7.3, -2.5, 3.4, 1.5], index=['a','c','d','e'])
+s2 = pd.Series([-2.1, 3.6, -1.5, 4, 3.1], index = ['a','c','e','f','g'])
+print(s1)
+print(s2)
+s1+s2
+df1 = pd.DataFrame(np.arange(9.).reshape((3,3)), columns=list('bcd'), 
+                   index=['Ohio', 'Texas', 'Colorado'])
+df2 = pd.DataFrame(np.arange(12.).reshape((4,3)), columns=list('bde'), 
+                   index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+print(df1)
+print(df2)
+df1+df2
+df1 = pd.DataFrame({'A': [1,2]})
+df2 = pd.DataFrame({'B': [3,4]})
+print(df1)
+print(df2)
+df1 - df2
+df1 = pd.DataFrame(np.arange(12.).reshape((3,4)), columns=list('abcd'))
+df2 = pd.DataFrame(np.arange(20.).reshape((4,5)), columns=list('abcde'))
+print(df1)
+print(df2)
+df1+df2
+df1.add(df2, fill_value=0)
+1/df1
+df1.rdiv(1)
+df1.reindex(columns = df2.columns, fill_value=0)
+arr = np.arange(12.).reshape((3,4))
+arr
+arr- arr[0]
+frame = pd.DataFrame(np.arange(12.).reshape((4,3)),
+                    columns=list('bde'),
+                    index = ['Utah', 'Ohio', 'Texas', 'Oregon'])
+series = frame.iloc[0]
+print(frame)
+print(series)
+frame - series
+series2 = pd.Series(range(3), index=['b','e','f'])
+frame + series2
+series3 = frame['d']
+series3
+frame
+frame.sub(series3, axis='index')
 ```
 
 ### Conclusion
