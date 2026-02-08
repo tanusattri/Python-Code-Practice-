@@ -512,6 +512,8 @@ frame = pd.DataFrame({'b': [4.3,7,-3,2], 'a':[0,1,0,1],
                      'c': [-2,5,8,-2.5]})
 frame
 frame.rank(axis='columns')
+obj = pd.Series(range(5), index=['a','a','b','b','c'])
+obj
 ```
 
 ### Conclusion
