@@ -514,6 +514,26 @@ frame
 frame.rank(axis='columns')
 obj = pd.Series(range(5), index=['a','a','b','b','c'])
 obj
+obj.index.is_unique
+obj['a']
+obj['c']
+df = pd.DataFrame(np.random.randn(4,3), index=['a','a','b','b'])
+df
+df.loc['b']
+df = pd.DataFrame([[1.4, np.nan], [7.1, -4.5],
+                  [np.nan, np.nan], [0.75,-1.3]],
+                 index=['a','b','c','d'],
+                 columns=['one','two'])
+df
+df.sum()
+df.sum(axis='columns')
+df.mean(axis='columns', skipna=False)
+df.idxmax()
+df.cumsum() #cumulative-sum
+df.describe()
+obj = pd.Series(['a','a','b','c'] * 4)
+print(obj)
+obj.describe()
 ```
 
 ### Conclusion
