@@ -7,7 +7,7 @@
 - [Numpy](#numpy)
 - [Pandas Series](#pandas-series)
 - [Pandas DataFrame](#pandas-dataframe)
-- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
+- [Conclusion](#conclusion)
 
 ### Introduction 
 This repository is based on how I used various Python techniques and libraries to implement in my Data Analytics Project. The project starts with the basic codes of python and later get advanced by using numpy, pandas and matplotlib. 
@@ -536,7 +536,6 @@ obj = pd.Series(['a','a','b','c'] * 4)
 print(obj)
 obj.describe()
 ```
-### Data Cleaning and Preparation
 
 ### Conclusion
 Syntax and Logic Practice with help of Python using libraries like NumPy, Pandas and Matplotlib.
