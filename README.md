@@ -9,7 +9,7 @@
 - [Pandas DataFrame](#pandas-dataframe)
 - [Conclusion](#conclusion)
 
-### Introduction 
+### Introduction
 This repository is based on how I used various Python techniques and libraries to implement in my Data Analytics Project. The project starts with the basic codes of python and later get advanced by using numpy, pandas and matplotlib. 
 
 ### Code Basic 
